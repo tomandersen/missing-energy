@@ -32,11 +32,6 @@ See the [FAQ] in the Wiki for answers to frequently asked questions such as how
 to add an institution logo to the poster.
 
 
-## License
-
-Copyright (c) 2018-2022 Anish Athalye. Released under the MIT License. See
-[LICENSE.md][license] for details.
-
 [beamerposter]: https://github.com/deselaers/latex-beamerposter
 [Auriga]: https://github.com/anishathalye/auriga
 [LuaTeX]: http://www.luatex.org/
