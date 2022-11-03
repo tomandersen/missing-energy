@@ -11,7 +11,7 @@
 \usepackage{lmodern}
 \usepackage[size=custom,width=120,height=72,scale=1.0]{beamerposter}
 \usetheme{gemini}
-\usecolortheme{gemini}
+\usecolortheme{cam}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tikz}
@@ -65,6 +65,16 @@
 % ====================
 
 \begin{document}
+
+% Refer to https://github.com/k4rtik/uchicago-poster
+% logo: https://www.cam.ac.uk/brand-resources/about-the-logo/logo-downloads
+\addtobeamertemplate{headline}{}
+{
+    \begin{tikzpicture}[remember picture,overlay]
+      \node [anchor=north west, inner sep=3cm] at ([xshift=0.0cm,yshift=1.0cm]current page.north west)
+      {\includegraphics[height=4.5cm]{logos/cambridge-reversed-color-logo.eps}}; 
+    \end{tikzpicture}
+}
 
 \begin{frame}[t]
 \begin{columns}[t]
