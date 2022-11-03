@@ -1,14 +1,9 @@
-# Gemini [![Build Status](https://github.com/anishathalye/gemini/workflows/CI/badge.svg)](https://github.com/anishathalye/gemini/actions?query=workflow%3ACI)
+# Unofficial Poster Template for University of Cambridge
+ [![Overleaf Template](https://img.shields.io/badge/Overleaf-Template-success?logo=overleaf)](https://www.overleaf.com/latex/templates/unofficial-poster-template-for-uchicago-computer-science/kbbmbdxwbypb)
 
-Gemini is a modern LaTeX [beamerposter] theme.
+A fork of Gemini. Also available on Overleaf.
 
-<p align="center">
-<a href="https://raw.githubusercontent.com/anishathalye/assets/master/gemini/poster-gemini.pdf">
-<img src="https://raw.githubusercontent.com/anishathalye/assets/master/gemini/poster-gemini-small.png">
-</a>
-</p>
-
-If you're looking for a beamer presentation theme, take a look at [Auriga].
+![gemini_cam](https://user-images.githubusercontent.com/11074066/199757993-851d5934-b7d5-4805-a666-704cc9b7c799.png)
 
 ## Dependencies
 
@@ -36,46 +31,6 @@ If you're looking for a beamer presentation theme, take a look at [Auriga].
 See the [FAQ] in the Wiki for answers to frequently asked questions such as how
 to add an institution logo to the poster.
 
-## Themes
-
-Gemini currently includes three color themes:
-
-* `gemini` (default)
-* `mit`
-* `labsix`
-
-The alternative themes are intended to be inspiration for you to make your own
-color theme. You're highly recommended to make your own color theme (it's
-really easy!) or use the default Gemini theme.
-
-### MIT theme
-
-<p align="center">
-<a href="https://raw.githubusercontent.com/anishathalye/assets/master/gemini/poster-mit.pdf">
-<img src="https://raw.githubusercontent.com/anishathalye/assets/master/gemini/poster-mit-small.png">
-</a>
-</p>
-
-### LabSix theme
-
-<p align="center">
-<a href="https://raw.githubusercontent.com/anishathalye/assets/master/gemini/poster-labsix.pdf">
-<img src="https://raw.githubusercontent.com/anishathalye/assets/master/gemini/poster-labsix-small.png">
-</a>
-</p>
-
-## Design goals
-
-* **Minimal**: clean and easy to read, so that the emphasis is on the content
-* **Batteries included**: works and looks good out of the box
-* **Easy theming**: easy to create and use a new color theme
-
-## Contributing
-
-Contributions to Gemini such as bug reports, new themes, and new poster
-components are greatly appreciated! Given the subjective nature of design,
-you're encouraged to open an issue or pull request early to get feedback before
-investing a lot of time in implementing a new feature.
 
 ## License
 
