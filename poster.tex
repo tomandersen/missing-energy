@@ -16,6 +16,7 @@
 \usecolortheme{cam}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage[numbers]{natbib}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.14}
@@ -188,8 +189,7 @@
 \begin{columns}
 \begin{column}{0.4\textwidth}
 \begin{center}
-       \begin{figure}
-      \centering
+      \begin{figure}
       \begin{tikzpicture}
         \begin{axis}[
             scale only axis,
@@ -325,7 +325,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dapibus era
   \begin{block}{References}
 
     \nocite{*}
-    \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
+    \footnotesize{\bibliographystyle{plainnat}\bibliography{poster}}
 
   \end{block}
 
