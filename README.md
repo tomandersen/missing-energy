@@ -5,6 +5,8 @@ A fork of Gemini. Also available on Overleaf.
 
 ![gemini_cam](https://user-images.githubusercontent.com/11074066/199757993-851d5934-b7d5-4805-a666-704cc9b7c799.png)
 
+Another example:
+
 ![ProbAdvPoster](https://github.com/user-attachments/assets/73d75fd2-5ac2-4c3c-80de-42b3ab5e6496)
 
 ## Dependencies
