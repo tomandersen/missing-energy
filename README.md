@@ -1,7 +1,7 @@
 # Unofficial Poster Template for University of Cambridge
  [![Overleaf Template](https://img.shields.io/badge/Overleaf-Template-success?logo=overleaf)](https://www.overleaf.com/latex/templates/unofficial-poster-template-for-university-of-cambridge/mtjqrnmghxsc)
 
-A fork of Gemini. Also available on Overleaf.
+A fork of Gemini. Also available on [Overleaf](https://www.overleaf.com/latex/templates/unofficial-poster-template-for-university-of-cambridge/mtjqrnmghxsc).
 
 ![gemini_cam](https://user-images.githubusercontent.com/11074066/199757993-851d5934-b7d5-4805-a666-704cc9b7c799.png)
 
