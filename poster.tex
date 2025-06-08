@@ -16,11 +16,15 @@
 \usecolortheme{cam}
 \usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage[numbers]{natbib}
+%\usepackage[numbers]{natbib}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.14}
 \usepackage{anyfontsize}
+\usepackage[style=numeric-comp,doi=false,url=false,isbn=false]{biblatex}
+%\usepackage[doi=false,isbn=false,url=false]{biblatex}
+\addbibresource{tom_biblatex.bib}
+\renewcommand*{\bibfont}{\normalfont\small}
 
 % ====================
 % Lengths
@@ -30,8 +34,8 @@
 % (N+1)*\sepwidth + N*\colwidth = \paperwidth
 \newlength{\sepwidth}
 \newlength{\colwidth}
-\setlength{\sepwidth}{0.025\paperwidth}
-\setlength{\colwidth}{0.3\paperwidth}
+\setlength{\sepwidth}{0.02\paperwidth}
+\setlength{\colwidth}{0.176\paperwidth}
 
 \newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
 
@@ -39,20 +43,17 @@
 % Title
 % ====================
 
-\title{Some fancy title: followed by some more text}
-
-\author{Alyssa P. Hacker \inst{1} \and Ben Bitdiddle \inst{2} \and Lem E. Tweakit \inst{2}}
-
-\institute[shortinst]{\inst{1} Some Institute \samelineand \inst{2} Another Institute}
+\title{Einstein's Missing Energy}
+\author{Thomas C. Andersen (nSCIr.ca Canada)}
 
 % ====================
 % Footer (optional)
 % ====================
 
 \footercontent{
-  \href{https://www.example.com}{https://www.example.com} \hfill
-  ABC Conference 2025, New York --- XYZ-1234 \hfill
-  \href{mailto:alyssa.p.hacker@example.com}{alyssa.p.hacker@example.com}}
+  \href{https://nscir.ca}{https://nscir.ca} \hfill
+  Quantum Gravity 2025 at Penn State July 21 - 25 \hfill ORCID: https://orcid.org/0000-0003-1614-4124 \hfill
+  \href{mailto:tandersen@nscir.ca}{tandersen@nscir.ca}}
 % (can be left out to remove footer)
 
 % ====================
@@ -60,8 +61,8 @@
 % ====================
 
 % use this to include logos on the left and/or right side of the header:
-% \logoright{\includegraphics[height=7cm]{logo1.pdf}}
-% \logoleft{\includegraphics[height=7cm]{logo2.pdf}}
+ \logoright{nscir.ca}
+ \logoleft{\includegraphics[height=5cm]{images/ski-fernie.jpeg}}
 
 % ====================
 % Body
@@ -71,265 +72,221 @@
 
 % Refer to https://github.com/k4rtik/uchicago-poster
 % logo: https://www.cam.ac.uk/brand-resources/about-the-logo/logo-downloads
-\addtobeamertemplate{headline}{}
-{
-    \begin{tikzpicture}[remember picture,overlay]
-      \node [anchor=north west, inner sep=3cm] at ([xshift=0.0cm,yshift=1.0cm]current page.north west)
-      {\includegraphics[height=4.5cm]{logos/cambridge-reversed-color-logo.eps}}; 
-    \end{tikzpicture}
-}
+%\addtobeamertemplate{headline}{}
+%{
+%    \begin{tikzpicture}[remember picture,overlay]
+%      \node [anchor=north west, inner sep=3cm] at ([xshift=0.0cm,yshift=1.0cm]current page.north west)
+%      {\includegraphics[height=4.5cm]{logos/cambridge-reversed-color-logo.eps}}; 
+%    \end{tikzpicture}
+%}
 
 \begin{frame}[t]
 \begin{columns}[t]
 \separatorcolumn
 
+% ============================================
+% ============================================
+%COLUMN 1
+% ============================================
+% ============================================
+
+\begin{column}{\colwidth}
+\begin{quotation}
+Energy isn't conserved in General Relativity.
+\end{quotation}
+\rightline{--Will Kinney\cite{willkinney[@wkcosmo]EnergyIsntConserved2021}}
+
+  \begin{block}{Abstract}
+In this poster we restore energy conservation in General Relativity, which for our theory, implies a universal rest frame. The solution presented here thus drops covariance, but regular (think Standard Model) matter and energy still behave covariantly. As an example, a Schwarzschild like solution is developed within our framework, using Birkhoff's theorem. Unlike a black hole, this solution shows no horizons and no massive singularity. We also find a new polarization mode of gravitational radiation, namely (superluminal!) monopolar radiation.
+
+The new theory has some parallels with Quantum mechanics, which is known to prefer an absolute time (via the Schrödinger equation) and non - local physics (through Bell violations).
+
+Thus, we begin a journey to emerge quantum mechanics from a new extension of Einstein's General Relativity that obeys Emily Noether's energy conservation. 
+
+  \end{block}
+
+  \begin{block}{Ad Hoc energy conservation}
+  	We know gravitational energy certainly exists, and does impact the total energy of a space time. For example, with gravitational waves (imagine near a coalescing binary black hole), researchers simply plop the wave energy into the right side stress energy tensor. But you can't always do it - there is no reliable, 'energy is built in' theory. That's the point. Einstein (and everyone else) couldn't get that to work. Indeed, it probably can't work, although lots of people have tried.
+
+  \end{block}
+
+  \begin{block}{Pseudo Tensors}
+
+
+Einstein and others hope to fix this lack of energy conservation lay in `pseudo tensors', which are discussed and evaluated for example by Virbhadra\cite{virbhadraEnergyDistributionKerrNewman1990}\cite{virbhadraEnergyMomentumVaidya1992}. It's fairly straight forward using Mathematica to see how unreliable these pseudo tensors are - the same physical Schwarzschild solution in isotropic $x,y,z,t$ vs `Kerr-Schild' in $x,y,z,t$ give conflicting results\cite{RzeroMathematicaSchwarschildpseudoChecknb}. Pseudo tensors don't work.
+  \end{block}
+
+  \begin{block}{Quasi Local Energy}
+There are improvements to be had over the pseudo tensor approach. The quasilocal energy of Brown and York\cite{Brown1993} and Katz\cite{Katz2005} and others \cite{haroNoethersTheoremsEnergy2021}\cite{lyndenbell1985}\cite{changPseudotensorsQuasilocalEnergymomentum1999} detail how to assign energy to the gravitational field. 
+
+These treatments crucially don't take the step of letting the gravitational field know about this energy. It's viewed as a curiosity of an existing (say vacuum) solution. 
+  \end{block}
+
+
+\end{column}
+
+\separatorcolumn
+
+% ============================================
+% ============================================
+%COLUMN 2
+% ============================================
+% ============================================
+
+\begin{column}{\colwidth}
+  \begin{block}{The Theory: Energy Conservation}
+We put the energy of the gravitational $Q(F)$ , where $F$ represents the gravitational field, into the Einstein equations as a new separate term: 
+  \begin{equation}
+R_{\mu\nu}-\dfrac{1}{2}g_{\mu\nu}R - Q(F) = 8\pi G T_{\mu \nu}.
+\label{newEquation}
+\end{equation}
+	$Q(F) \approx 0$ if the gravitational field is in the linear regime. So for regular matter (say solar system and earth lab dynamics), it's ignorable. 
+	
+	However, in a strong gravity situation we would have to \textit{account for the mass generated by the energy content of that space time}.
+\end{block}
+  
+  \begin{block}{Example: Spherical Symmetry }
+ We now build a Schwarzschild like solution that includes gravitational energy, using quasilocal energy, which in the Schwarzschild solution is (far field, with isotropic r)\cite{lyndenbell1985}: 
+
+\begin{equation} \label{energyDensityEqn}
+	E_{density} = \frac{Gm(r)^2}{8 \pi r^4}.
+\end{equation}
+To obtain the mass function $m(r)$: we start at a distant point out where $m(r) = M$, then walk in, dropping some energy from the Birkhoff mass at r into the gravitational field at every step, thus allowing this energy to build the gravitational field.
+	
+A python script\cite{RzeroJupyterGravitationalEnergyipynb} easily numerically calculates the mass function, which turns out to be (in isotropic coords)
+
+\begin{equation}
+	m(r) = M - M/(1 + 2r/M),
+\end{equation}
+
+The resulting metric is then:
+		\begin{equation} \label{lineElement}
+			ds^2 = \frac{-r^2}{(M+r)^2}dt^2 + \frac{16(M+r)^4}{(M+2r)^4}(dr^2 + r^2d\theta^2 + r^2 sin^2(\theta)d\phi^2),
+		\end{equation}
+
+which shows no singularity. The energy required to build the gravitational field is exactly equal to the distant mass M of the object. Simple.
+\end{block}
+
+\begin{alertblock}{Confusion on Gravitational Energy}
+
+The literature on the subject of `where the energy is' - even for the Schwarzschild solution - full of contradictions. The energy is outside or inside the horizon, positive or negative, 2M, or M, or zero, etc.  For example, D. Lynden-Bell and Katz on the localization of mass:\cite{lyndenbell1985}
+\begin{quotation}
+	The Penrose mass of a Schwarzschild hole is all within the hole, whereas ours is all outside it.
+\end{quotation}
+
+We believe that much of the confusion arises from double counting the mass/energy in the Schwarzschild solution, both the field and the point mass contribute, leading authors to awkward choices. 
+
+\end{alertblock}
+
+
+\end{column}
+
+\separatorcolumn
+
+% ============================================
+% ============================================
+%COLUMN 3
+% ============================================
+% ============================================
+
 \begin{column}{\colwidth}
 
-  \begin{block}{A block title}
-
-    Some block contents, followed by a diagram, followed by a dummy paragraph.
+  \begin{exampleblock}{No Singularity}
 
     \begin{figure}
-      \centering
-      \begin{tikzpicture}[scale=6]
-        \draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
-        \draw (1,0) -- (0.2,0.2) -- (0,1) -- (-0.2,0.2) -- (-1,0)
-          -- (-0.2,-0.2) -- (0,-1) -- (0.2,-0.2) -- cycle;
-      \end{tikzpicture}
-      \caption{A figure caption.}
-    \end{figure}
+\includegraphics[width=0.9\columnwidth]{no-horizons-s.png}
+\caption{The mass function as found here, in Schwarzschild coordinates. The mass at every radius is below the horizon radius for that mass, so there is no event horizon. Also one can see that the behaviour as $r \rightarrow 0$ is not a problem. For a normal black hole, the mass function is a horizontal line at the top of the graph, at M = 1}
+\label{isotropic-energy-hole-s}
+\end{figure} 
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultricies
-    eget libero ac ullamcorper. Integer et euismod ante. Aenean vestibulum
-    lobortis augue, ut lobortis turpis rhoncus sed. Proin feugiat nibh a
-    lacinia dignissim. Proin scelerisque, risus eget tempor fermentum, ex
-    turpis condimentum urna, quis malesuada sapien arcu eu purus.
+\end{exampleblock}
 
-  \end{block}
+\begin{block}{Monopole Superluminal Waves}
+	We will look at what happens in our solution in the case of a small perturbation in the mass at r. 
+\begin{figure}
+\includegraphics[width=0.6\columnwidth]{monopole.png}
+\caption{Monopole Wave: There are three zones. Inner zone: a Schwarzschild region with mass $M_0$. Outer zone an implied mass of $M_o + \Delta M$. In between is the 'wave zone' where the perceived mass drops. Almost all the drop is near the boundary wall at $r$ between \textbf{1} and \textbf{2}. We will find that this boundary must be rapidly moving to satisfy global energy conservation.}
+\label{monopoleEnergy} 
+\end{figure}
 
-  \begin{block}{A block containing a list}
+The problem with energy conservation here is immediately apparent. An observer in the outer zone will, by Birkhoff's theorem, see a total mass of $M_o + \Delta M$ - but this extra mass $\Delta M$ is not actually there. We fix it by giving the wave zone a velocity, and using its kinetic energy to balance the books. See\cite{andersenEinsteinsMissingEnergy2025}.
 
-    Nam vulputate nunc felis, non condimentum lacus porta ultrices. Nullam sed
-    sagittis metus. Etiam consectetur gravida urna quis suscipit.
+\begin{equation} \label{finalSpeedEqn}
+ v = \sqrt{\frac{2 r}{GM} - 2}.
+\end{equation}
 
+Equation (\ref{finalSpeedEqn}) is the speed at which a monopolar wave would need to travel. It usually works out to a value of tens of thousands of times the speed of light. The wave slows as the gravitational well increases in depth. It has the exact same form as the formula for the speed of a tsunami: $\sqrt(depth)$. These monopole waves feel the global structure.
+\end{block}
+
+
+\end{column}
+\separatorcolumn
+
+% ============================================
+% ============================================
+%COLUMN 4
+% ============================================
+% ============================================
+
+\begin{column}{\colwidth}
+  \begin{block}{Quantum Mechanics}
+  
+  Emergent Quantum Mechanics postulates that quantum mechanics arises from de Broglie - Bohm like mechanics based on a real (often scalar) field\cite{Bush2015a}. We speculate that the Faraday waves of Emergent Quantum Mechanics may be the monopole waves postulated here. 
+  
+  Quantum mechanics has problems with relativity and also has non local effects. We are investigating if the superluminal aspect of the monopole waves discussed here can be a mechanism for quantum non locality. Experiments to determine the 'speed of spooky quantum action at a distance'\cite{salartTestingSpeedSpooky2008a} have determined minimum speeds of the same order of magnitude as equation (\ref{finalSpeedEqn}).
+   
+From the earth and sun on earth's surface:
+  \begin{equation}
+ v_{earth} = \sqrt{\frac{2*6000km}{1 cm} - 2} \ \approx 35000c .
+\end{equation}
+\begin{equation}
+ v_{sun} = \sqrt{\frac{2*150e6km}{1 km} - 2} \ \approx 17000c .
+\end{equation}
+
+      \begin{figure}
+\includegraphics[width=0.9\columnwidth]{bush-waves.png}
+\caption{Some visualizations of Pilot wave - Faraday waves. (Creative commons). \cite{Bush2015a}}
+\label{bush-faraday}
+\end{figure} 
+
+  
+\begin{alertblock}{Lorentz - Poincarie special relativity}
+
+Explain it.
+\end{alertblock} 
+   
+\end{block}
+
+
+
+\end{column}
+\separatorcolumn
+% ============================================
+% ============================================
+%COLUMN 5
+% ============================================
+% ============================================
+
+\begin{column}{\colwidth}
+
+  \begin{alertblock}{Summary}
     \begin{itemize}
-      \item \textbf{Mauris tempor} risus nulla, sed ornare
-      \item \textbf{Libero tincidunt} a duis congue vitae
-      \item \textbf{Dui ac pretium} morbi justo neque, ullamcorper
+      \item \textbf{Normal Physics:} light and matter use the exact same normal Einstein Equations of GR.
+      \item \textbf{Adding Energy Conservation} requires breaking covariance, which we do by picking a frame.
+      \item \textbf{Schwarzschild} like solutions have no singularities.
+       \item \textbf{Quasi-local energy} is unambiguous and adds to M.
+       \item \textbf{Monopolar waves} can exist and travel at ~10,000c.
+       \item 
+       
     \end{itemize}
-
-    Eget augue porta, bibendum venenatis tortor.
-
-  \end{block}
-
-  \begin{alertblock}{A highlighted block}
-
-    This block catches your eye, so \textbf{important stuff} should probably go
-    here.
-
-    Curabitur eu libero vehicula, cursus est fringilla, luctus est. Morbi
-    consectetur mauris quam, at finibus elit auctor ac. Aliquam erat volutpat.
-    Aenean at nisl ut ex ullamcorper eleifend et eu augue. Aenean quis velit
-    tristique odio convallis ultrices a ac odio.
-
-    \begin{itemize}
-      \item \textbf{Fusce dapibus tellus} vel tellus semper finibus. In
-        consequat, nibh sed mattis luctus, augue diam fermentum lectus.
-      \item \textbf{In euismod erat metus} non ex. Vestibulum luctus augue in
-        mi condimentum, at sollicitudin lorem viverra.
-      \item \textbf{Suspendisse vulputate} mauris vel placerat consectetur.
-        Mauris semper, purus ac hendrerit molestie, elit mi dignissim odio, in
-        suscipit felis sapien vel ex.
-    \end{itemize}
-
-    Aenean tincidunt risus eros, at gravida lorem sagittis vel. Vestibulum ante
-    ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-
   \end{alertblock}
 
-\end{column}
-
-\separatorcolumn
-
-\begin{column}{\colwidth}
-
-  \begin{block}{A block containing an enumerated list}
-
-    Vivamus congue volutpat elit non semper. Praesent molestie nec erat ac
-    interdum. In quis suscipit erat. \textbf{Phasellus mauris felis, molestie
-    ac pharetra quis}, tempus nec ante. Donec finibus ante vel purus mollis
-    fermentum. Sed felis mi, pharetra eget nibh a, feugiat eleifend dolor. Nam
-    mollis condimentum purus quis sodales. Nullam eu felis eu nulla eleifend
-    bibendum nec eu lorem. Vivamus felis velit, volutpat ut facilisis ac,
-    commodo in metus.
-
-    \begin{enumerate}
-      \item \textbf{Morbi mauris purus}, egestas at vehicula et, convallis
-        accumsan orci. Orci varius natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus.
-      \item \textbf{Cras vehicula blandit urna ut maximus}. Aliquam blandit nec
-        massa ac sollicitudin. Curabitur cursus, metus nec imperdiet bibendum,
-        velit lectus faucibus dolor, quis gravida metus mauris gravida turpis.
-      \item \textbf{Vestibulum et massa diam}. Phasellus fermentum augue non
-        nulla accumsan, non rhoncus lectus condimentum.
-    \end{enumerate}
-
-  \end{block}
-
-  \begin{block}{Fusce aliquam magna velit}
-
-    Et rutrum ex euismod vel. Pellentesque ultricies, velit in fermentum
-    vestibulum, lectus nisi pretium nibh, sit amet aliquam lectus augue vel
-    velit. Suspendisse rhoncus massa porttitor augue feugiat molestie. Sed
-    molestie ut orci nec malesuada. Sed ultricies feugiat est fringilla
-    posuere.
-
-\vspace{1em}
-
-\begin{columns}
-\begin{column}{0.4\textwidth}
-\begin{center}
-      \begin{figure}
-      \begin{tikzpicture}
-        \begin{axis}[
-            scale only axis,
-            no markers,
-            domain=0:2*pi,
-            samples=100,
-            axis lines=center,
-            axis line style={-},
-            ticks=none]
-          \addplot[red] {sin(deg(x))};
-          \addplot[blue] {cos(deg(x))};
-        \end{axis}
-      \end{tikzpicture}
-      \caption{Another figure caption.}
-    \end{figure}
-   \end{center}
-\end{column}
-\begin{column}{0.6\textwidth}  %%<--- here
-\justify
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dapibus erat. Morbi quis leo congue, lobortis augue bibendum, malesuada neque. Duis ullamcorper quis orci sed consequat. Nam pellentesque ullamcorper tempor. Duis eget nulla blandit, vulputate orci vitae, ullamcorper ligula. Mauris a urna ac massa dignissim scelerisque sed et augue. Donec eget urna vitae neque elementum pellentesque et eget enim. Praesent a fermentum nibh. Nullam eu nibh neque. 
-\end{column}
-\end{columns}
-
-
-  \end{block}
-
-  \begin{block}{Nam cursus consequat egestas}
-
-    Nulla eget sem quam. Ut aliquam volutpat nisi vestibulum convallis. Nunc a
-    lectus et eros facilisis hendrerit eu non urna. Interdum et malesuada fames
-    ac ante \textit{ipsum primis} in faucibus. Etiam sit amet velit eget sem
-    euismod tristique. Praesent enim erat, porta vel mattis sed, pharetra sed
-    ipsum. Morbi commodo condimentum massa, \textit{tempus venenatis} massa
-    hendrerit quis. Maecenas sed porta est. Praesent mollis interdum lectus,
-    sit amet sollicitudin risus tincidunt non.
-
-    Etiam sit amet tempus lorem, aliquet condimentum velit. Donec et nibh
-    consequat, sagittis ex eget, dictum orci. Etiam quis semper ante. Ut eu
-    mauris purus. Proin nec consectetur ligula. Mauris pretium molestie
-    ullamcorper. Integer nisi neque, aliquet et odio non, sagittis porta justo.
-
-    \begin{itemize}
-      \item \textbf{Sed consequat} id ante vel efficitur. Praesent congue massa
-        sed est scelerisque, elementum mollis augue iaculis.
-        \begin{itemize}
-          \item In sed est finibus, vulputate
-            nunc gravida, pulvinar lorem. In maximus nunc dolor, sed auctor eros
-            porttitor quis.
-          \item Fusce ornare dignissim nisi. Nam sit amet risus vel lacus
-            tempor tincidunt eu a arcu.
-          \item Donec rhoncus vestibulum erat, quis aliquam leo
-            gravida egestas.
-        \end{itemize}
-      \item \textbf{Sed luctus, elit sit amet} dictum maximus, diam dolor
-        faucibus purus, sed lobortis justo erat id turpis.
-      \item \textbf{Pellentesque facilisis dolor in leo} bibendum congue.
-        Maecenas congue finibus justo, vitae eleifend urna facilisis at.
-    \end{itemize}
-
-  \end{block}
+\begin{block}{References}
+\printbibliography
+\end{block}
 
 \end{column}
 
-\separatorcolumn
-
-\begin{column}{\colwidth}
-
-  \begin{exampleblock}{A highlighted block containing some math}
-
-    A different kind of highlighted block.
-
-    $$
-    \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
-    $$
-
-    Interdum et malesuada fames $\{1, 4, 9, \ldots\}$ ac ante ipsum primis in
-    faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
-    felis id vulputate.
-
-    \heading{A heading inside a block}
-
-    Praesent consectetur mi $x^2 + y^2$ metus, nec vestibulum justo viverra
-    nec. Proin eget nulla pretium, egestas magna aliquam, mollis neque. Vivamus
-    dictum $\mathbf{u}^\intercal\mathbf{v}$ sagittis odio, vel porta erat
-    congue sed. Maecenas ut dolor quis arcu auctor porttitor.
-
-    \heading{Another heading inside a block}
-
-    Sed augue erat, scelerisque a purus ultricies, placerat porttitor neque.
-    Donec $P(y \mid x)$ fermentum consectetur $\nabla_x P(y \mid x)$ sapien
-    sagittis egestas. Duis eget leo euismod nunc viverra imperdiet nec id
-    justo.
-
-  \end{exampleblock}
-
-  \begin{block}{Nullam vel erat at velit convallis laoreet}
-
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos. Phasellus libero enim, gravida sed erat sit amet,
-    scelerisque congue diam. Fusce dapibus dui ut augue pulvinar iaculis.
-
-    \begin{table}
-      \centering
-      \begin{tabular}{l r r c}
-        \toprule
-        \textbf{First column} & \textbf{Second column} & \textbf{Third column} & \textbf{Fourth} \\
-        \midrule
-        Foo & 13.37 & 384,394 & $\alpha$ \\
-        Bar & 2.17 & 1,392 & $\beta$ \\
-        Baz & 3.14 & 83,742 & $\delta$ \\
-        Qux & 7.59 & 974 & $\gamma$ \\
-        \bottomrule
-      \end{tabular}
-      \caption{A table caption.}
-    \end{table}
-
-    Donec quis posuere ligula. Nunc feugiat elit a mi malesuada consequat. Sed
-    imperdiet augue ac nibh aliquet tristique. Aenean eu tortor vulputate,
-    eleifend lorem in, dictum urna. Proin auctor ante in augue tincidunt
-    tempor. Proin pellentesque vulputate odio, ac gravida nulla posuere
-    efficitur. Aenean at velit vel dolor blandit molestie. Mauris laoreet
-    commodo quam, non luctus nibh ullamcorper in. Class aptent taciti sociosqu
-    ad litora torquent per conubia nostra, per inceptos himenaeos.
-
-    Nulla varius finibus volutpat. Mauris molestie lorem tincidunt, iaculis
-    libero at, gravida ante. Phasellus at felis eu neque suscipit suscipit.
-    Integer ullamcorper, dui nec pretium ornare, urna dolor consequat libero,
-    in feugiat elit lorem euismod lacus. Pellentesque sit amet dolor mollis,
-    auctor urna non, tempus sem.
-
-  \end{block}
-
-  \begin{block}{References}
-
-    \nocite{*}
-    \footnotesize{\bibliographystyle{plainnat}\bibliography{poster}}
-
-  \end{block}
-
-\end{column}
 
 \separatorcolumn
 \end{columns}
