@@ -94,7 +94,14 @@
 \begin{quotation}
 Energy isn't conserved in General Relativity.
 \end{quotation}
-\rightline{--Will Kinney\cite{willkinney[@wkcosmo]EnergyIsntConserved2021}}
+\rightline{\footnotesize --Will Kinney\cite{willkinney[@wkcosmo]EnergyIsntConserved2021}}
+
+\begin{quotation}
+actual physics is non-local.
+\end{quotation}
+\rightline{\footnotesize --Tim Maudlin\cite{Maudlind}} 
+
+
 
   \begin{block}{Abstract}
 In this poster we restore energy conservation in General Relativity, which for our theory, implies a universal rest frame. The solution presented here thus drops covariance, but regular (think Standard Model) matter and energy still behave covariantly. As an example, a Schwarzschild like solution is developed within our framework, using Birkhoff's theorem. Unlike a black hole, this solution shows no horizons and no massive singularity. We also find a new polarization mode of gravitational radiation, namely (superluminal!) monopolar radiation.
@@ -156,7 +163,7 @@ To obtain the mass function $m(r)$: we start at a distant point out where $m(r) 
 A python script\cite{RzeroJupyterGravitationalEnergyipynb} easily numerically calculates the mass function, which turns out to be (in isotropic coords)
 
 \begin{equation}
-	m(r) = M - M/(1 + 2r/M),
+	m(r) = M - M/(1 + 2r/M).
 \end{equation}
 
 The resulting metric is then:
@@ -170,6 +177,7 @@ which shows no singularity. The energy required to build the gravitational field
 \begin{alertblock}{Confusion on Gravitational Energy}
 
 The literature on the subject of `where the energy is' - even for the Schwarzschild solution - full of contradictions. The energy is outside or inside the horizon, positive or negative, 2M, or M, or zero, etc.  For example, D. Lynden-Bell and Katz on the localization of mass:\cite{lyndenbell1985}
+
 \begin{quotation}
 	The Penrose mass of a Schwarzschild hole is all within the hole, whereas ours is all outside it.
 \end{quotation}
@@ -195,7 +203,7 @@ We believe that much of the confusion arises from double counting the mass/energ
 
     \begin{figure}
 \includegraphics[width=0.9\columnwidth]{no-horizons-s.png}
-\caption{The mass function as found here, in Schwarzschild coordinates. The mass at every radius is below the horizon radius for that mass, so there is no event horizon. Also one can see that the behaviour as $r \rightarrow 0$ is not a problem. For a normal black hole, the mass function is a horizontal line at the top of the graph, at M = 1}
+\caption{The mass function as found here, in Schwarzschild coordinates. The mass at every radius is below the horizon radius for that mass, so there is no event horizon. Also one can see that the behaviour as $r \rightarrow 0$ is not a problem. For a normal black hole, the mass function is a horizontal line at the top of the graph, at M = 1. A neutron star has a radius of $\approx 5$ on this graph.}
 \label{isotropic-energy-hole-s}
 \end{figure} 
 
@@ -204,7 +212,7 @@ We believe that much of the confusion arises from double counting the mass/energ
 \begin{block}{Monopole Superluminal Waves}
 	We will look at what happens in our solution in the case of a small perturbation in the mass at r. 
 \begin{figure}
-\includegraphics[width=0.6\columnwidth]{monopole.png}
+\includegraphics[width=0.45\columnwidth]{monopole.png}
 \caption{Monopole Wave: There are three zones. Inner zone: a Schwarzschild region with mass $M_0$. Outer zone an implied mass of $M_o + \Delta M$. In between is the 'wave zone' where the perceived mass drops. Almost all the drop is near the boundary wall at $r$ between \textbf{1} and \textbf{2}. We will find that this boundary must be rapidly moving to satisfy global energy conservation.}
 \label{monopoleEnergy} 
 \end{figure}
@@ -215,7 +223,7 @@ The problem with energy conservation here is immediately apparent. An observer i
  v = \sqrt{\frac{2 r}{GM} - 2}.
 \end{equation}
 
-Equation (\ref{finalSpeedEqn}) is the speed at which a monopolar wave would need to travel. It usually works out to a value of tens of thousands of times the speed of light. The wave slows as the gravitational well increases in depth. It has the exact same form as the formula for the speed of a tsunami: $\sqrt(depth)$. These monopole waves feel the global structure.
+Equation (\ref{finalSpeedEqn}) is the speed at which a monopolar wave would need to travel. It usually works out to a value of tens of thousands of times the speed of light. The wave slows as the gravitational well increases in depth. It has the exact same form as the formula for the speed of a tsunami: $\sqrt depth$. These monopole waves feel the global structure.
 \end{block}
 
 
@@ -237,10 +245,10 @@ Equation (\ref{finalSpeedEqn}) is the speed at which a monopolar wave would need
    
 From the earth and sun on earth's surface:
   \begin{equation}
- v_{earth} = \sqrt{\frac{2*6000km}{1 cm} - 2} \ \approx 35000c .
+ v_{earth} = \sqrt{\frac{2*6000km}{1 cm} - 2} \ \approx 35000c ,
 \end{equation}
 \begin{equation}
- v_{sun} = \sqrt{\frac{2*150e6km}{1 km} - 2} \ \approx 17000c .
+ v_{sun} = \sqrt{\frac{2*150e6km}{3 km} - 2} \ \approx 10000c . 
 \end{equation}
 
       \begin{figure}
@@ -250,10 +258,10 @@ From the earth and sun on earth's surface:
 \end{figure} 
 
   
-\begin{alertblock}{Lorentz - Poincarie special relativity}
+\begin{exampleblock}{Experimental tests}
 
 Explain it.
-\end{alertblock} 
+\end{exampleblock} 
    
 \end{block}
 
@@ -276,7 +284,7 @@ Explain it.
       \item \textbf{Schwarzschild} like solutions have no singularities.
        \item \textbf{Quasi-local energy} is unambiguous and adds to M.
        \item \textbf{Monopolar waves} can exist and travel at ~10,000c.
-       \item 
+       \item \textbf{Special Relativity} is assumed to be in the Lorentz/Poincarie method, where a single stationary frame is postulated.
        
     \end{itemize}
   \end{alertblock}
