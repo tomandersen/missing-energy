@@ -44,7 +44,7 @@
 % ====================
 
 \title{Einstein's Missing Energy}
-\author{Thomas C. Andersen (nSCIr.ca Canada)}
+\author{\small Thomas C. Andersen, Canada}
 
 % ====================
 % Footer (optional)
@@ -61,8 +61,8 @@
 % ====================
 
 % use this to include logos on the left and/or right side of the header:
- \logoright{nscir.ca}
- \logoleft{\includegraphics[height=5cm]{images/ski-fernie.jpeg}}
+ \logoright{\large nscir.ca}
+ \logoleft{\includegraphics[height=4cm]{images/ski-fernie.jpeg}}
 
 % ====================
 % Body
@@ -104,29 +104,29 @@ actual physics is non-local.
 
 
   \begin{block}{Abstract}
-In this poster we restore energy conservation in General Relativity, which for our theory, implies a universal rest frame. The solution presented here thus drops covariance, but regular (think Standard Model) matter and energy still behave covariantly. As an example, a Schwarzschild like solution is developed within our framework, using Birkhoff's theorem. Unlike a black hole, this solution shows no horizons and no massive singularity. We also find a new polarization mode of gravitational radiation, namely (superluminal!) monopolar radiation.
+In this poster we restore energy conservation in General Relativity, implying in our theory a universal rest frame. The solution presented here thus drops covariance, but regular (think Standard Model) matter and energy still behave covariantly. As an example, a Schwarzschild like solution is developed within our framework, using Birkhoff's theorem. Unlike a black hole, this solution shows no horizons and no massive singularity. We also find a new polarization mode of gravitational radiation, namely (superluminal!) monopolar radiation.
 
 The new theory has some parallels with Quantum mechanics, which is known to prefer an absolute time (via the Schrödinger equation) and non - local physics (through Bell violations).
 
-Thus, we begin a journey to emerge quantum mechanics from a new extension of Einstein's General Relativity that obeys Emily Noether's energy conservation. 
+This study thus explores a different approach to quantum gravity: a plan to emerge quantum mechanics from a new extension of Einstein's General Relativity which obeys Emily Noether's energy conservation. 
 
   \end{block}
 
   \begin{block}{Ad Hoc energy conservation}
-  	We know gravitational energy certainly exists, and does impact the total energy of a space time. For example, with gravitational waves (imagine near a coalescing binary black hole), researchers simply plop the wave energy into the right side stress energy tensor. But you can't always do it - there is no reliable, 'energy is built in' theory. That's the point. Einstein (and everyone else) couldn't get that to work. Indeed, it probably can't work, although lots of people have tried.
+  	We know gravitational energy certainly exists, thus impacting the total energy of a space time. For example, with gravitational waves, (think strong ones near a coalescing binary black hole), researchers simply drop the wave energy onto the right side - $T_{ab}$. But you can't always do it - there is no reliable, 'energy is built in' theory. That's the point. Einstein (and everyone else) couldn't get that to work. Indeed, Noether showed it can't work covariantly\cite{haroNoethersTheoremsEnergy2021}.
 
   \end{block}
 
   \begin{block}{Pseudo Tensors}
 
 
-Einstein and others hope to fix this lack of energy conservation lay in `pseudo tensors', which are discussed and evaluated for example by Virbhadra\cite{virbhadraEnergyDistributionKerrNewman1990}\cite{virbhadraEnergyMomentumVaidya1992}. It's fairly straight forward using Mathematica to see how unreliable these pseudo tensors are - the same physical Schwarzschild solution in isotropic $x,y,z,t$ vs `Kerr-Schild' in $x,y,z,t$ give conflicting results\cite{RzeroMathematicaSchwarschildpseudoChecknb}. Pseudo tensors don't work.
+Einstein and others hope to fix this lack of energy conservation started with `pseudo tensors', which are discussed and evaluated for example by Virbhadra\cite{virbhadraEnergyDistributionKerrNewman1990}\cite{virbhadraEnergyMomentumVaidya1992}. It's fairly straight forward using Mathematica to see how unreliable these pseudo tensors are - the same physical Schwarzschild solution in isotropic vs `Kerr-Schild' (both in $x,y,z,t$) give conflicting results\cite{RzeroMathematicaSchwarschildpseudoChecknb}. Pseudo tensors don't work.
   \end{block}
 
   \begin{block}{Quasi Local Energy}
 There are improvements to be had over the pseudo tensor approach. The quasilocal energy of Brown and York\cite{Brown1993} and Katz\cite{Katz2005} and others \cite{haroNoethersTheoremsEnergy2021}\cite{lyndenbell1985}\cite{changPseudotensorsQuasilocalEnergymomentum1999} detail how to assign energy to the gravitational field. 
 
-These treatments crucially don't take the step of letting the gravitational field know about this energy. It's viewed as a curiosity of an existing (say vacuum) solution. 
+These treatments\cite{olteanMotionLocalizedSources2020} crucially don't take the step of letting the gravitational field back-react on this energy. It's viewed as a curiosity of an existing (say vacuum) solution. 
   \end{block}
 
 
@@ -141,8 +141,8 @@ These treatments crucially don't take the step of letting the gravitational fiel
 % ============================================
 
 \begin{column}{\colwidth}
-  \begin{block}{The Theory: Energy Conservation}
-We put the energy of the gravitational $Q(F)$ , where $F$ represents the gravitational field, into the Einstein equations as a new separate term: 
+  \begin{block}{\textbf{The Theory: Energy Conservation}}
+We put the energy of the gravitational $Q(F)$ , where $F$ represents the gravitational potential/field, into the Einstein equations as a new separate term: 
   \begin{equation}
 R_{\mu\nu}-\dfrac{1}{2}g_{\mu\nu}R - Q(F) = 8\pi G T_{\mu \nu}.
 \label{newEquation}
@@ -160,7 +160,7 @@ R_{\mu\nu}-\dfrac{1}{2}g_{\mu\nu}R - Q(F) = 8\pi G T_{\mu \nu}.
 \end{equation}
 To obtain the mass function $m(r)$: we start at a distant point out where $m(r) = M$, then walk in, dropping some energy from the Birkhoff mass at r into the gravitational field at every step, thus allowing this energy to build the gravitational field.
 	
-A python script\cite{RzeroJupyterGravitationalEnergyipynb} easily numerically calculates the mass function, which turns out to be (in isotropic coords)
+A python script\cite{RzeroJupyterGravitationalEnergyipynb} using the exact isotropic energy equation calculates the mass function, which turns out to be (in isotropic coords):
 
 \begin{equation}
 	m(r) = M - M/(1 + 2r/M).
@@ -182,7 +182,7 @@ The literature on the subject of `where the energy is' - even for the Schwarzsch
 	The Penrose mass of a Schwarzschild hole is all within the hole, whereas ours is all outside it.
 \end{quotation}
 
-We believe that much of the confusion arises from double counting the mass/energy in the Schwarzschild solution, both the field and the point mass contribute, leading authors to awkward choices. 
+We believe that much of the confusion arises from double counting the mass/energy in the Schwarzschild solution, as both the field and the point mass contribute, leading authors to awkward choices. 
 
 \end{alertblock}
 
@@ -204,7 +204,7 @@ We believe that much of the confusion arises from double counting the mass/energ
     \begin{figure}
 \includegraphics[width=0.9\columnwidth]{no-horizons-s.png}
 \caption{The mass function as found here, in Schwarzschild coordinates. The mass at every radius is below the horizon radius for that mass, so there is no event horizon. Also one can see that the behaviour as $r \rightarrow 0$ is not a problem. For a normal black hole, the mass function is a horizontal line at the top of the graph, at M = 1. A neutron star has a radius of $\approx 5$ on this graph.}
-\label{isotropic-energy-hole-s}
+\label{sw-energy-hole-fig}
 \end{figure} 
 
 \end{exampleblock}
@@ -213,7 +213,7 @@ We believe that much of the confusion arises from double counting the mass/energ
 	We will look at what happens in our solution in the case of a small perturbation in the mass at r. 
 \begin{figure}
 \includegraphics[width=0.45\columnwidth]{monopole.png}
-\caption{Monopole Wave: There are three zones. Inner zone: a Schwarzschild region with mass $M_0$. Outer zone an implied mass of $M_o + \Delta M$. In between is the 'wave zone' where the perceived mass drops. Almost all the drop is near the boundary wall at $r$ between \textbf{1} and \textbf{2}. We will find that this boundary must be rapidly moving to satisfy global energy conservation.}
+\caption{Monopole Wave: There are three zones. Inner zone: a Schwarzschild region with mass $M_0$. Outer zone: an implied mass of $M_o + \Delta M$. In between is the 'wave zone' where the perceived mass drops. Almost all the drop is near the boundary wall at $r$ between \textbf{1} and \textbf{2}. We will find that this boundary must be rapidly moving to satisfy global energy conservation.}
 \label{monopoleEnergy} 
 \end{figure}
 
@@ -223,7 +223,7 @@ The problem with energy conservation here is immediately apparent. An observer i
  v = \sqrt{\frac{2 r}{GM} - 2}.
 \end{equation}
 
-Equation (\ref{finalSpeedEqn}) is the speed at which a monopolar wave would need to travel. It usually works out to a value of tens of thousands of times the speed of light. The wave slows as the gravitational well increases in depth. It has the exact same form as the formula for the speed of a tsunami: $\sqrt depth$. These monopole waves feel the global structure.
+Equation (\ref{finalSpeedEqn}) is the speed at which a monopolar wave would need to travel. It usually works out to a value of tens of thousands of times the speed of light. The wave slows as the gravitational well increases in depth. It has the exact same form as the formula for the speed of a tsunami: $\sqrt depth$. Both of these monopole waves feel the global structure.
 \end{block}
 
 
@@ -238,21 +238,17 @@ Equation (\ref{finalSpeedEqn}) is the speed at which a monopolar wave would need
 
 \begin{column}{\colwidth}
   \begin{block}{Quantum Mechanics}
+  \textbf{Motivation}: Quantum mechanics has problems with relativity and also has non local effects.
   
-  Emergent Quantum Mechanics postulates that quantum mechanics arises from de Broglie - Bohm like mechanics based on a real (often scalar) field\cite{Bush2015a}. We speculate that the Faraday waves of Emergent Quantum Mechanics may be the monopole waves postulated here. 
-  
-  Quantum mechanics has problems with relativity and also has non local effects. We are investigating if the superluminal aspect of the monopole waves discussed here can be a mechanism for quantum non locality. Experiments to determine the 'speed of spooky quantum action at a distance'\cite{salartTestingSpeedSpooky2008a} have determined minimum speeds of the same order of magnitude as equation (\ref{finalSpeedEqn}).
+  \textit{Emergent Quantum Mechanics postulates that quantum mechanics arises from de Broglie - Bohm like mechanics based on a real (often scalar) field\cite{Bush2015a}.} We speculate that the Faraday waves of Emergent Quantum Mechanics may be the monopole waves postulated here.  We are investigating if the superluminal aspect of the monopole waves discussed here can be a mechanism for quantum non locality. Experiments to determine the 'speed of spooky quantum action at a distance'\cite{salartTestingSpeedSpooky2008a} have determined minimum speeds of the same order of magnitude as equation (\ref{finalSpeedEqn}).
    
 From the earth and sun on earth's surface:
   \begin{equation}
- v_{earth} = \sqrt{\frac{2*6000km}{1 cm} - 2} \ \approx 35000c ,
-\end{equation}
-\begin{equation}
- v_{sun} = \sqrt{\frac{2*150e6km}{3 km} - 2} \ \approx 10000c . 
+ v_{earth} = \sqrt{\frac{2*6000km}{1 cm} - 2} \ \approx 35000c,\ \ v_{sun} \approx 10000c. 
 \end{equation}
 
       \begin{figure}
-\includegraphics[width=0.9\columnwidth]{bush-waves.png}
+\includegraphics[width=0.6\columnwidth]{bush-waves.png}
 \caption{Some visualizations of Pilot wave - Faraday waves. (Creative commons). \cite{Bush2015a}}
 \label{bush-faraday}
 \end{figure} 
@@ -260,7 +256,15 @@ From the earth and sun on earth's surface:
   
 \begin{exampleblock}{Experimental tests}
 
-Explain it.
+ \begin{itemize}
+      \item \textbf{Speed of Spooky Action:} There are  experiments that show that QM is faster or about the same speed as that calculated here. Which is odd. 
+      \item \textbf{Lorentz violations:} While normal matter is still Lorentz friendly, the black - hole like object described here is not. But most/all black holes are found moving slowly. Perhaps one can look for emission line strangeness, etc.
+      \item \textbf{Bigger than a black hole:} The compact objects described here are about twice as big as a black hole (see fig. \ref{sw-energy-hole-fig}). Can observations tell them apart?
+      \item \textbf{Energy Conservation} Energy is conserved, but only when measured from the (presumably CMB) frame. Can we measure a consequence?
+      \item \textbf{Near Earth} The effective mass of the earth rises after one passes through the atmosphere, due to the matter energy of the gravitational field (see our mass function). Can we detect this $10^{-10}$ effect?
+      \item \textbf{Solar System Dynamics} Since spheres of stuff act to a good approximation as a point in orbital mechanics, it seems unlikely, but there could be detectable differences?
+       
+\end{itemize}
 \end{exampleblock} 
    
 \end{block}
@@ -279,12 +283,12 @@ Explain it.
 
   \begin{alertblock}{Summary}
     \begin{itemize}
-      \item \textbf{Normal Physics:} light and matter use the exact same normal Einstein Equations of GR.
+      \item \textbf{Status Quo:} light and matter use the exact same normal Einstein Equations of GR.
       \item \textbf{Adding Energy Conservation} requires breaking covariance, which we do by picking a frame.
       \item \textbf{Schwarzschild} like solutions have no singularities.
-       \item \textbf{Quasi-local energy} is unambiguous and adds to M.
-       \item \textbf{Monopolar waves} can exist and travel at ~10,000c.
-       \item \textbf{Special Relativity} is assumed to be in the Lorentz/Poincarie method, where a single stationary frame is postulated.
+       \item \textbf{Gravitational self energy} is unambiguous if measured in \textit{the} frame.
+       \item \textbf{Monopolar waves} are a consequence.
+       \item \textbf{Special Relativity} is interpreted as per Lorentz/Poincarie, where a single stationary frame is postulated.
        
     \end{itemize}
   \end{alertblock}
