@@ -21,11 +21,6 @@ Likely out of date PNG
 1. In `poster.tex`, set up your paper size, column layout, and scale the
    content as necessary
 
-1. Make a copy of `beamercolorthemegemini.sty`, update the `\usecolortheme`
-   line in `poster.tex`, and theme the poster to your liking (optional, but
-   highly recommended)
-
-1. Run `make` to build your poster
 
 ## FAQ
 
